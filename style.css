@@ -96,7 +96,8 @@ section{
     color: red;
 
     transform: rotate(90deg);
-    animation: go-down 1s  ease-in-out infinite;
+    animation: go-down 1s cubic-bezier(0, 0.98, 0.81, 0.38) infinite; 
+    /* ease-in-out infinite; */
 }
 
 @keyframes go-down {
@@ -105,8 +106,13 @@ section{
         /* transform: rotate(90deg); */
         bottom: 50px;
     }
+    50%{
+        color: green;;
+    }
+
     100%{
         /* transform: translateY(30px); */
         bottom: 5px;
+        color: pink;
     }
 }
